@@ -28,4 +28,60 @@ To run the code you need to install the graphics library Pillow-Pil - the same l
 ## Part II. Homework
 ### Clustering countries 
 See <a href="https://docs.google.com/document/d/1x1odD42pG4v0E0ioEgKblb6hBwf-FhH0lYzRlvSSAcE/edit?usp=sharing">Google doc</a>.
+### Files explanation
+### .py files
+<ol>
+  <li>
+    `prep_data.py` clean useless columns and fill missing values with mean of 3 nearest neighbors.
+  </li>
+  <li>
+    `clusters.py` has all related clustering functions, including distance metrics: pearson, euclidean, cosine, tanimoto, clustering techniques: k-means, bisecting-kmeans, hierarchical; and other utility functions.
+  </li>
+  <li>
+    `hclustertitles.py` can create pictures of hierarchical clusters with different distance metrics and inter distances, create heatmap, output clustering results, and create word clouds for each cluster.
+  </li>
+  <li>
+    `kmclustertitles.py` can create SSE graphs of different distance metrics, create heatmap, output clustering results, and create word clouds for each cluster.
+  </li>
+  <li>
+    `prep_visulization.py` changes country names to the ones Google visualization recognizes and convert clustering results `.csv` files to `.js` files.
+  </li>
+  <li>
+    `word_cloud.py` has utilities functions for creating the word clouds.
+  </li>
+</ol>
+### .csv files
+<ol>
+  <li>
+    `dataset.csv` is the original dataset.
+  </li>
+  <li>
+    `processed.csv` is the cleaned dataset with only useful columns for this lab and missing values filled with mean of three nearest neighbors.
+  </li>
+  <li>
+    `country_details.csv` has two columns, first one is the country names in the dataset, and second one is the corresponding country names that Google visualization needs.
+  </li>
+  <li>
+    `dimensions_keywords.csv` is key words for each cultural dimensions. This is for creating the word clouds.
+  </li>
+  <li>
+    `hcluster_result.csv` is the results of hierarchical clustering.
+  </li>
+  <li>
+    `kcluster_result.csv` is the results of bisecting kmeans clustering.
+  </li>
+</ol>
+### webpage files
+`visulization.html`, `hcluster_result.js`, `kcluster_result.js` are for visulization. 
+### folders
+<ol>
+  <li>
+    `graphs` contains all resulting graphs and pictures
+  </li>
+  <li>
+    `other files` contains files that part I mentions but are useless for this lab.
+  </li>
+</ol>
+
+
 
