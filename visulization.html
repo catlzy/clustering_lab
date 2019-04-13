@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="hcluster_result.js"></script>
+    <script type="text/javascript" src="kcluster_result.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var hdata_display = google.visualization.arrayToDataTable(hdata);
+        var hoptions = {
+          // colorAxis: {colors: ['#ADD8E6', '#F08080', '#E6E6FA', '#66CDAA', '#FFDEAD', '#AABBFE']},
+          colorAxis: {colors: ['#EBEE6B', '#D663C3']},
+          backgroundColor: '#F0F8FF',
+        };
+        // var options1 = {
+        //   region: '002', // Africa
+        //   colorAxis: {colors: ['#00853f', 'black', '#e31b23']},
+        //   backgroundColor: '#81d4fa',
+        //   datalessRegionColor: '#f8bbd0',
+        //   defaultColor: '#f5f5f5',
+        // };
+        var hchart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+        hchart.draw(hdata_display, hoptions);
+
+        var kdata_display = google.visualization.arrayToDataTable(kdata);
+        var koptions = {
+          // colorAxis: {colors: ['#ADD8E6', '#F08080', '#E6E6FA', '#66CDAA', '#FFDEAD', '#AABBFE']},
+          colorAxis: {colors: ['#6BEEDE', '#6B7DEE']},
+          backgroundColor: '#F0F8FF',
+        };
+        var kchart = new google.visualization.GeoChart(document.getElementById('regions_div1'));
+        kchart.draw(kdata_display, koptions);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Hierarchical Clustering of Countries</h1>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+    <h1>Bisecting K-means Clustering of Countries</h1>
+    <div id="regions_div1" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
