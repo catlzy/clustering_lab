@@ -29,28 +29,15 @@ To run the code you need to install the graphics library Pillow-Pil - the same l
 ### Clustering countries 
 See <a href="https://docs.google.com/document/d/1x1odD42pG4v0E0ioEgKblb6hBwf-FhH0lYzRlvSSAcE/edit?usp=sharing">Google doc</a>.
 ### Files explanation
-### .py files
-<ol>
-  <li>
-    `prep_data.py` clean useless columns and fill missing values with mean of 3 nearest neighbors.
-  </li>
-  <li>
-    `clusters.py` has all related clustering functions, including distance metrics: pearson, euclidean, cosine, tanimoto, clustering techniques: k-means, bisecting-kmeans, hierarchical; and other utility functions.
-  </li>
-  <li>
-    `hclustertitles.py` can create pictures of hierarchical clusters with different distance metrics and inter distances, create heatmap, output clustering results, and create word clouds for each cluster.
-  </li>
-  <li>
-    `kmclustertitles.py` can create SSE graphs of different distance metrics, create heatmap, output clustering results, and create word clouds for each cluster.
-  </li>
-  <li>
-    `prep_visulization.py` changes country names to the ones Google visualization recognizes and convert clustering results `.csv` files to `.js` files.
-  </li>
-  <li>
-    `word_cloud.py` has utilities functions for creating the word clouds.
-  </li>
-</ol>
-### .csv files
+#### .py files
+1. `prep_data.py` clean useless columns and fill missing values with mean of 3 nearest neighbors.
+2. `clusters.py` has all related clustering functions, including distance metrics: pearson, euclidean, cosine, tanimoto, clustering techniques: k-means, bisecting-kmeans, hierarchical; and other utility functions.
+3. `hclustertitles.py` can create pictures of hierarchical clusters with different distance metrics and inter distances, create heatmap, output clustering results, and create word clouds for each cluster.
+4. `kmclustertitles.py` can create SSE graphs of different distance metrics, create heatmap, output clustering results, and create word clouds for each cluster.
+5. `prep_visulization.py` changes country names to the ones Google visualization recognizes and convert clustering results `.csv` files to `.js` files.
+6. `word_cloud.py` has utilities functions for creating the word clouds.
+
+#### .csv files
 <ol>
   <li>
     `dataset.csv` is the original dataset.
@@ -71,9 +58,11 @@ See <a href="https://docs.google.com/document/d/1x1odD42pG4v0E0ioEgKblb6hBwf-FhH
     `kcluster_result.csv` is the results of bisecting kmeans clustering.
   </li>
 </ol>
-### webpage files
+
+#### webpage files
 `visulization.html`, `hcluster_result.js`, `kcluster_result.js` are for visulization. 
-### folders
+
+#### folders
 <ol>
   <li>
     `graphs` contains all resulting graphs and pictures
